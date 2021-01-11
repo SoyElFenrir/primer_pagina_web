@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Strix Componentes</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <header>
+        <p style="font-size: 200%; color: black;text-align: center;">BIENVENIDO A TIENDA STRIX COMPONENTES</p>
+        <nav>
+            <ul>
+                <li><a class="boton-personalizado" href="Inicio.html">Inicio</a></li>
+                <li><a class="boton-personalizado" href="Hardware.html">Hardware</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside>
+            <img class="logo" src="images/strix-hero.png" alt="Logo">
+        </aside>
+        <article>
+            <h1>
+                Comprar
+            </h1>
+            <div class="hardware">
+                <img src="" class="imagen_disco">
+                <div class="columns">
+                    <div class="title"></div>
+                    <div class="price"></div>
+                </div>
+                <p style="color: black;">
+                    Este disco Blue es para gaming
+                </p>
+            </div>
+            <form action="http://jkorpela.fi/cgi-bin/echo.cgi", method="POST">
+                <div class="input-group">
+                    <div>
+                        <label for="first-name">First Name</label>
+                    </div>
+                    <div>
+                        <input type="text" name="first-name" id="first-name">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div>
+                        <label for="last-name">Last Name</label>
+                    </div>
+                    <div>
+                        <input type="text" name="last-name" id="last-name">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div>
+                        <label for="cell-phone">Cell Phone</label>
+                    </div>
+                    <div>
+                        <input type="text" name="cell-phone" id="cell-phone">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div>
+                        <label for="e-mail">E-mail</label>
+                    </div>
+                    <div>
+                        <input type="text" name="e-mail" id="e-mail">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div>
+                        <label for="country">Country</label>
+                    </div>
+                    <div>
+                        <input type="text" name="country" id="country">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div>
+                        <label for="direction">Direction</label>
+                    </div>
+                    <div>
+                        <input type="text" name="direction" id="direction">
+                    </div>
+                </div>
+                <input type="reset" value="Limpiar">
+                <input type="submit" value="Confirmar">
+            </form>
+        </article>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="Componentes.html">Components</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul>
+                <li><p>País: Argentina</p>
+                <li><p>Phone: +54 9 381-3155506</p></li>
+                <li><p>Empresa: Tienda Strix Componentes</p></li>
+                <li><p>Correo: sergio.miguel.aguirre1@gmail.com</p></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const order = localStorage.getItem('order')
+        if(order){
+            const discosOrder = JSON.parse(order)
+            const discos = document.querySelector('.imagen_disco')
+            const title = document.querySelector('.title')
+            const price = document.querySelector('.price')
+
+            title.innerText = discosOrder.title
+            price.innerText = discosOrder.price
+
+            discos.setAttribute("src", `images/${discosOrder.id}.jpg`)
+        }
+    })
+</script>
+</html>

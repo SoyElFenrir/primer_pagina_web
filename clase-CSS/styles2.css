@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+}
+
+html,body{
+    height: 100%;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+}
+
+p{
+    margin: 0.5em 0 0.5em 0;
+    color: white;
+}
+
+header{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: grey;
+    padding: 10px;
+    z-index: 2;
+}
+
+header > p{
+    color: hotpink;
+}
+
+.boton-personalizado{
+    text-decoration:none;
+    font: weight 700;
+    font-size:25px;
+    color: whitesmoke;
+    padding-top:7px;
+    padding-bottom:7px;
+    padding-left:205px;
+    padding-right:205px;
+    background-color:#6fcaa0;
+    border-color: green;
+    border-width: 3px;
+    border-style: solid;
+    border-radius:35px;
+}
+
+nav a:visited,
+nav a:link{
+    color: rgb(231, 223, 223);
+    text-decoration: none;
+}
+
+nav > ul{
+    display: inline;
+    padding: 0;
+}
+
+nav > ul > li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 5px 0 5px;
+    text-decoration-line:underline;
+}
+
+main{
+    display: block;
+    background-image: url("images/fondo.jpg");
+    padding-top: 8em;
+    padding-bottom: 3em;
+    height: 85%;
+}
+
+footer{
+    padding: 15px;
+}
+
+aside,
+article{
+    padding: 3em;
+}
+
+/*aside{
+    text-align: center;
+}*/
+
+article{
+    width: 75%;
+}
+
+.logo{
+    max-width: 100%;
+}
+
+h1{
+    font-size: 3em;
+    margin-top: 0.5em;
+    color: rgb(27, 131, 145);
+}
+
+.sub_title{
+    background-color: rgb(255, 115, 0);
+    font-size: 1.5em;
+    padding: 10px;
+    border: solid 2px chocolate;
+}
+
+@media only screen and (min-width: 768px){
+    main{
+        display:flex;
+        margin-left: 0%;
+        width: 100%;
+    }
+
+    aside{
+        margin-left: 0%;
+    }
+
+    .column-desktop{
+        /*display: flex;*/
+        float: left;
+    }
+}
+
+/* Catálogo */
+.hardware{
+    width: 250px;
+    height: 350px;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    border: solid 3px lightseagreen;
+    float: left;
+    position: relative;
+    z-index: 1;
+}
+
+.hardware img{
+    width: 220px;
+    height: 220px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.hardware .title{
+    font-weight: bold;
+}
+
+.hardware .price{
+    text-align: right;
+}
+
+.hardware .columns{
+    max-width: 100%;
+    display: flex;
+}
+
+.hardware .columns div{
+    width: 50%;
+}
+
+.hardware button{
+    background-color: lightslategrey;
+    padding: 10px;
+    border: solid 1px black;
+    border-radius: 3px;
+    position: absolute;
+    bottom: 5px;
+}
+
+.imagen_ram{
+    width: 50px; height: 50px;
+}
